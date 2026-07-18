@@ -59,7 +59,7 @@ cp .env.example .env
 ./run.sh --interactive --requirements-file ./REQUIREMENTS.md
 
 # Or provide the URL upfront (skips the paste step)
-./run.sh -i --url "https://octopusgroup.com.au" --requirements-file ./REQUIREMENTS.md
+./run.sh -i --url "https://example.com/survey" --requirements-file ./REQUIREMENTS.md
 ```
 
 #### Direct Mode (stable survey URLs)
