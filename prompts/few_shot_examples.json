@@ -1,0 +1,41 @@
+[
+  {
+    "page_context": "## Page: Employee Satisfaction Survey\n\n### Interactive Elements (5 total)\n\n| ui-id | Tag | Type | Text/Label | Position | Disabled |\n|-------|-----|------|------------|----------|----------|\n| `ui-id-0` | input | radio | Very Satisfied | (200, 150) |  |\n| `ui-id-1` | input | radio | Satisfied | (200, 190) |  |\n| `ui-id-2` | input | radio | Neutral | (200, 230) |  |\n| `ui-id-3` | input | radio | Dissatisfied | (200, 270) |  |\n| `ui-id-4` | button | submit | Next Page | (400, 500) |  |\n\n### Page Text Content\nQ1. How satisfied are you with your current work environment?",
+    "requirements": "Select 'Satisfied' for all questions",
+    "expected_output": {
+      "thought": "A single-choice question: 'How satisfied are you with your current work environment?' with 4 options. Per the requirements, select 'Satisfied' (ui-id-1), then click Next.",
+      "status": "CONTINUE",
+      "actions": [
+        {"type": "click", "ui_id": "ui-id-1", "reason": "Select the 'Satisfied' option"},
+        {"type": "navigate", "action": "next", "reason": "Question complete, go to next page"}
+      ]
+    }
+  },
+  {
+    "page_context": "## Page: Personal Information\n\n### Interactive Elements (4 total)\n\n| ui-id | Tag | Type | Text/Label | Position | Disabled |\n|-------|-----|------|------------|----------|----------|\n| `ui-id-0` | input | text | Please enter your name | (200, 100) |  |\n| `ui-id-1` | input | email | Please enter your email | (200, 160) |  |\n| `ui-id-2` | input | tel | Please enter your phone | (200, 220) |  |\n| `ui-id-3` | button | submit | Submit Survey | (400, 500) |  |\n\n### Page Text Content\nPlease fill in your personal information. All fields are required.",
+    "requirements": "Name: 'John Smith', Email: 'test@example.com', Phone: '13800138000'",
+    "expected_output": {
+      "thought": "Three required text input fields. Fill in name, email, and phone per the requirements. Submit after all fields are complete.",
+      "status": "FINISHED",
+      "actions": [
+        {"type": "fill", "ui_id": "ui-id-0", "value": "John Smith", "reason": "Enter name"},
+        {"type": "fill", "ui_id": "ui-id-1", "value": "test@example.com", "reason": "Enter email"},
+        {"type": "fill", "ui_id": "ui-id-2", "value": "13800138000", "reason": "Enter phone number"},
+        {"type": "navigate", "action": "submit", "reason": "All required fields complete, submit survey"}
+      ]
+    }
+  },
+  {
+    "page_context": "## Page: Product Satisfaction Matrix\n\n### Interactive Elements (12 total)\n\n| ui-id | Tag | Type | Text/Label | Position | Disabled |\n|-------|-----|------|------------|----------|----------|\n| `ui-id-0` | input | radio | Strongly Agree-Product Quality | (300, 100) |  |\n| `ui-id-1` | input | radio | Agree-Product Quality | (380, 100) |  |\n| `ui-id-2` | input | radio | Neutral-Product Quality | (460, 100) |  |\n| `ui-id-3` | input | radio | Disagree-Product Quality | (540, 100) |  |\n| `ui-id-4` | input | radio | Strongly Agree-Customer Service | (300, 150) |  |\n| `ui-id-5` | input | radio | Agree-Customer Service | (380, 150) |  |\n| `ui-id-6` | input | radio | Neutral-Customer Service | (460, 150) |  |\n| `ui-id-7` | input | radio | Disagree-Customer Service | (540, 150) |  |\n| `ui-id-8` | button | submit | Next Page | (400, 600) |  |\n\n### Page Text Content\nMatrix: Please rate the following aspects\n|  | Strongly Agree | Agree | Neutral | Disagree |\n| Product Quality | ○ | ○ | ○ | ○ |\n| Customer Service | ○ | ○ | ○ | ○ |",
+    "requirements": "Select 'Agree' for all rows",
+    "expected_output": {
+      "thought": "A 2-row matrix/Likert scale. Row 1 is 'Product Quality', row 2 is 'Customer Service', each with 4 levels. Per requirements, select the 'Agree' column for all rows. 'Agree' corresponds to the 2nd radio button in each row.",
+      "status": "CONTINUE",
+      "actions": [
+        {"type": "click", "ui_id": "ui-id-1", "reason": "Product Quality — select 'Agree'"},
+        {"type": "click", "ui_id": "ui-id-5", "reason": "Customer Service — select 'Agree'"},
+        {"type": "navigate", "action": "next", "reason": "Matrix complete, go to next page"}
+      ]
+    }
+  }
+]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>矩阵量表题测试</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 10px; text-align: center; border: 1px solid #ddd; }
+        th:first-child, td:first-child { text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>产品满意度调查</h1>
+    <form id="survey-form">
+        <p class="question-text">请对以下方面进行评价：</p>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>非常同意</th>
+                    <th>同意</th>
+                    <th>一般</th>
+                    <th>不同意</th>
+                    <th>非常不同意</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row-label">产品质量好</td>
+                    <td><input type="radio" name="row1" value="5"></td>
+                    <td><input type="radio" name="row1" value="4"></td>
+                    <td><input type="radio" name="row1" value="3"></td>
+                    <td><input type="radio" name="row1" value="2"></td>
+                    <td><input type="radio" name="row1" value="1"></td>
+                </tr>
+                <tr>
+                    <td class="row-label">客服态度好</td>
+                    <td><input type="radio" name="row2" value="5"></td>
+                    <td><input type="radio" name="row2" value="4"></td>
+                    <td><input type="radio" name="row2" value="3"></td>
+                    <td><input type="radio" name="row2" value="2"></td>
+                    <td><input type="radio" name="row2" value="1"></td>
+                </tr>
+                <tr>
+                    <td class="row-label">价格合理</td>
+                    <td><input type="radio" name="row3" value="5"></td>
+                    <td><input type="radio" name="row3" value="4"></td>
+                    <td><input type="radio" name="row3" value="3"></td>
+                    <td><input type="radio" name="row3" value="2"></td>
+                    <td><input type="radio" name="row3" value="1"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="navigation" style="margin-top: 20px;">
+            <button type="button">下一页</button>
+        </div>
+    </form>
+</body>
+</html>

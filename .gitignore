@@ -1,0 +1,63 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+.eggs/
+*.manifest
+*.spec
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+.conda/
+
+# --- Environment & Secrets ---
+.env
+*.local
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# --- Logs & Traces ---
+logs/
+traces/
+*.log
+
+# --- Browser State ---
+browser_state/
+
+# --- Playwright ---
+playwright-report/
+test-results/
+
+# --- MyPy ---
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# --- Ruff ---
+.ruff_cache/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- Coverage ---
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/

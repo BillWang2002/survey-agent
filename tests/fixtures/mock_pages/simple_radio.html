@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>单选题测试</title>
+</head>
+<body>
+    <h1>员工满意度调查</h1>
+    <form id="survey-form">
+        <div class="question">
+            <p class="question-text">Q1. 您对当前工作环境是否满意？</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="very_satisfied"> 非常满意</label><br>
+                <label><input type="radio" name="q1" value="satisfied"> 满意</label><br>
+                <label><input type="radio" name="q1" value="neutral"> 一般</label><br>
+                <label><input type="radio" name="q1" value="dissatisfied"> 不满意</label><br>
+                <label><input type="radio" name="q1" value="very_dissatisfied"> 非常不满意</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">Q2. 您最喜欢的颜色是？</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="red" required> 红色</label><br>
+                <label><input type="radio" name="q2" value="blue"> 蓝色</label><br>
+                <label><input type="radio" name="q2" value="green"> 绿色</label>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button type="button" id="next-btn">下一页</button>
+        </div>
+    </form>
+</body>
+</html>

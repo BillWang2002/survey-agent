@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>滑块题测试</title>
+    <style>
+        .question { margin: 20px 0; }
+        .slider-container { margin: 10px 0; }
+        input[type="range"] { width: 300px; }
+        .slider-value { display: inline-block; margin-left: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>满意度评分</h1>
+    <form id="survey-form">
+        <div class="question">
+            <p class="question-text">Q1. 您对本产品的满意度评分（0-100分）</p>
+            <div class="slider-container">
+                <input type="range" id="satisfaction" name="satisfaction" min="0" max="100" value="50" required>
+                <span class="slider-value" id="satisfaction-value">50</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">Q2. 您愿意推荐本产品的可能性（0-100%）</p>
+            <div class="slider-container">
+                <input type="range" id="recommend" name="recommend" min="0" max="100" value="50" required>
+                <span class="slider-value" id="recommend-value">50</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">Q3. 其他意见或建议</p>
+            <textarea name="comments" rows="4" cols="50" placeholder="请输入您的意见..."></textarea>
+        </div>
+
+        <div class="navigation">
+            <button type="button">提交</button>
+        </div>
+    </form>
+
+    <script>
+        // Update displayed value when slider moves
+        document.getElementById('satisfaction').addEventListener('input', function() {
+            document.getElementById('satisfaction-value').textContent = this.value;
+        });
+        document.getElementById('recommend').addEventListener('input', function() {
+            document.getElementById('recommend-value').textContent = this.value;
+        });
+    </script>
+</body>
+</html>

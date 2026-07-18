@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PYTHONPATH=\"$\\(pwd\\)/src\" python -c \"from playwright.async_api import Browser\")",
+      "Bash(pip list *)",
+      "Bash(pip install *)",
+      "Bash(python *)",
+      "Bash(PYTHONPATH=\"$\\(pwd\\)/src\" python -c \"from playwright.async_api import Browser, BrowserContext, Page, async_playwright; print\\('Import OK'\\)\")",
+      "Bash(PYTHONPATH=\"$\\(pwd\\)/src\" python -c \"from survey_agent.core.state_machine import SurveyStateMachine, PageState; print\\('state_machine OK'\\); print\\('FAILED state:', PageState.FAILED\\)\")",
+      "Bash(PYTHONPATH=\"$\\(pwd\\)/src\" python -c \"from survey_agent.core.agent import SurveyAgent; print\\('agent.py OK'\\)\")",
+      "Bash(PYTHONPATH=\"$\\(pwd\\)/src\" python -m pytest tests/ -x -q)",
+      "mcp__ide__getDiagnostics",
+      "Bash(python3 *)"
+    ]
+  }
+}
